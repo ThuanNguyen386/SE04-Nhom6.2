@@ -1,0 +1,1 @@
+Sửa lỗi không upload và show được ảnh trong phần backend
