@@ -1,1 +1,3 @@
-Sửa lỗi không upload và show được ảnh trong phần backend
+Kết hợp templates Duy thiết kế vào frontend
+Hiển thị được hình ảnh sản phầm và thông tin brand ra ngoài frontend
+Bước đầu tạo được giỏ hàng
