@@ -49,7 +49,6 @@ $this->title = 'My Yii Application';
             <div class="hot-product">
                 <h2 class="block-title">Sản Phẩm Bán Chạy</h2>
             <?php foreach($products as $items) : ?>
-                <div class="product-carousel">
                     <div class="product-item">
                         <div class="container">
                             <div class="item item-type-zoom">
@@ -64,7 +63,6 @@ $this->title = 'My Yii Application';
                                     <div class="mask"></div>
                                 </a>
                                 <div class="item-img"><img src="<?php echo $items->image ?>" alt=""></div>
-                               
                             </div>
                         </div>
                         <div class="product-name">
@@ -87,11 +85,8 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
-    <?php endforeach; ?>
-        </div>  
-    
+        </div>
+            <?php endforeach; ?> 
     </div>
-
 <?php endif; ?>
