@@ -79,7 +79,7 @@ AppAsset::register($this);
                                 <nav>
                                     <ul>
                                         <li class="active">
-                                            <a href="single_page.html"><i class="fa fa-home fa-2x"></i></a>
+                                            <a href=""><i class="fa fa-home fa-2x"></i></a>
                                         </li>
                                         <li>
                                             <a href="single_page.html">Điện thoại<i class="fa fa-angle-down"></i></a>
