@@ -1,1 +1,0 @@
-<?php foreach($products as $items) : ?><img src="<?php echo $items->image ?><?php endforeach; ?>
