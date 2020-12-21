@@ -17,6 +17,7 @@ use Yii;
  * @property int $Pin
  * @property string $SIM
  * @property string $image
+ * @property string $best_seller
  *
  * @property Cartitem[] $cartitems
  * @property Brand $brand
@@ -41,7 +42,7 @@ class Product extends \yii\db\ActiveRecord
         return [
             [['brand_id', 'name', 'price', 'Ram', 'Rom', 'CPU', 'Pin', 'SIM'], 'required'],
             [['brand_id', 'price', 'Ram', 'Rom', 'Pin'], 'integer'],
-            [['name', 'CPU', 'SIM'], 'string', 'max' => 50],
+            [['name', 'CPU', 'SIM','best_seller'], 'string', 'max' => 50],
             [['image'], 'file', 'extensions' => 'jpg,png,gif'],
             [['brand_id'], 'exist', 'skipOnError' => true, 'targetClass' => Brand::className(), 'targetAttribute' => ['brand_id' => 'id']],
         ];
@@ -63,6 +64,7 @@ class Product extends \yii\db\ActiveRecord
             'Pin' => 'Pin',
             'SIM' => 'Sim',
             'image' => 'Upload Image',
+            'best_seller' => 'Best seller'
         ];
     }
 
@@ -71,6 +73,15 @@ class Product extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
+
+    public function findBest()
+
+    {
+
+        return parent::find()->where(['best_seller' => 'Yes']);
+
+    }
+
     public function getCartitems()
     {
         return $this->hasMany(Cartitem::className(), ['product_id' => 'id']);
