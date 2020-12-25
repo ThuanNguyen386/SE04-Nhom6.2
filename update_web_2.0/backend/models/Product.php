@@ -74,12 +74,34 @@ class Product extends \yii\db\ActiveRecord
      * @return \yii\db\ActiveQuery
      */
 
-    public function findBest()
-
+    public function findApple()
     {
+        return parent::find()->where(['brand_id' => 1]);
+    }
 
+    public function findSamsung()
+    {
+        return parent::find()->where(['brand_id' => 2]);
+    }
+
+    public function findVsmart()
+    {
+        return parent::find()->where(['brand_id' => 3]);
+    }
+
+    public function findXiaomi()
+    {
+        return parent::find()->where(['brand_id' => 4]);
+    }
+
+    public function findOppo()
+    {
+        return parent::find()->where(['brand_id' => 5]);
+    }
+
+    public function findBest()
+    {
         return parent::find()->where(['best_seller' => 'Yes']);
-
     }
 
     public function getCartitems()

@@ -9,10 +9,14 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use backend\models\Brand;
 
 AppAsset::register($this);
 ?>
-<?php $this->beginPage() ?>
+<?php
+$this->beginPage();
+$brands = Brand::find()->all();
+?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
@@ -81,30 +85,7 @@ AppAsset::register($this);
                                 <li class="active">
                                     <a href=""><i class="fa fa-home fa-2x"></i></a>
                                 </li>
-                                <li>
-                                    <a href="single_page.html">Hãng sản xuất<i class="fa fa-angle-down"></i></a>
-                                    <div class="sub_menu sub_menu_four">
-                                        <div class="category">
 
-                                            <div class="category-content">
-                                                <ul>
-
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Samsung</a></li>
-
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Apple</a></li>
-
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Vsmart</a></li>
-
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Xiaomi</a></li>
-
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Oppo</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
 
                                 <li>
                                     <a href="single_page.html">Hệ điều hành<i class="fa fa-angle-down"></i></a>

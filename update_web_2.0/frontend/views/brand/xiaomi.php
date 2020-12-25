@@ -2,14 +2,15 @@
 
 /* @var $this yii\web\View */
 
-use backend\models\Brand;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use backend\models\Brand;
 use backend\models\Product;
 
 $this->title = 'My Yii Application';
 ?>
 <?php
-$products = Product::findBest()->all();
+$products = Product::findXiaomi()->all();
 $brands = Brand::find()->all();
 ?>
 <?php if($products) : ?>
@@ -47,14 +48,12 @@ $brands = Brand::find()->all();
     </div>
     <div class="container">
         <div class="hot-product">
-            <h2 class="block-title">Sản Phẩm Bán Chạy</h2>
+            <h2 class="block-title"></h2>
             <div class="product-carousel">
                 <?php foreach($products as $items) : ?>
 
                     <div class="product-item">
-                        <div class="new-product">
-                            <span class="hot"><img src="images/hot.png"></span>
-                        </div>
+
                         <div class="container">
                             <div class="item item-type-zoom">
                                 <a class="item-hover" href="single_page.html">
