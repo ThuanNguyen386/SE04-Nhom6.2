@@ -45,8 +45,7 @@ $brands = Brand::find()->all();
                                 <a href="single_page.html">My Wishlist</a>
                             </li>
                             <li>
-                                <i class="fa fa-cart-arrow-down"></i>
-                                <a href="single_page.html">Giỏ hàng</a>
+                                <?php echo Html::a ('<i class="fa fa-cart-arrow-down"></i> Giỏ Hàng',['/cart/index']); ?>
                             </li>
                             <li>
                                 <i class="fa fa-facebook-official"></i>
@@ -83,7 +82,7 @@ $brands = Brand::find()->all();
                         <nav>
                             <ul>
                                 <li class="active">
-                                    <a href=""><i class="fa fa-home fa-2x"></i></a>
+                                    <?php echo Html::a('<i class="fa fa-home fa-2x"></i>',['/site/index']); ?>
                                 </li>
 
 
