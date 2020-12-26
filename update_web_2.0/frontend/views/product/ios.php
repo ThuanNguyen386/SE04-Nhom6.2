@@ -9,52 +9,20 @@ use backend\models\Product;
 $this->title = 'My Yii Application';
 ?>
 <?php
-$products = Product::findBest()->all();
+$products = Product::findIos()->all();
 $brands = Brand::find()->all();
 ?>
 <?php if($products) : ?>
 
-    <div id="header_mobile_menu"></div>
-    <div class="columns-container"></div>
-    <div class="static-home-bottom"></div>
-    <div class="container">
-        <div class="sidebar col-md-3">
-            <div class="category">
-                <h2 class="title"><i class="fa fa-bars"></i> Categories</h2>
-                <ul>
-                    <?php if($brands) :  ?>
-                        <?php foreach($brands as $items) : ?>
-                            <li><i class="fa fa-camera"></i> <?= Html::a($items->brand, ['/brand/index','id'=>$items->id]); ?></li>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                </ul>
-            </div>
-        </div>
-        <div class="content col-md-9">
-            <div class="slider">
-                <div id="slideshow">
-                    <ul>
-                        <li class="current"><img src="images/slide1.jpg" /></li>
-                        <li><img src="images/slide2.jpg" /></li>
-                        <li><img src="images/slide3.png" /></li>
 
-                    </ul>
-                    <span id="prev"></span>
-                    <span id="next"></span>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container">
-        <div class="hot-product">
-            <h2 class="block-title">Sản Phẩm Bán Chạy</h2>
-            <div class="product-carousel">
+
+            <h2 class="block-title"></h2>
+
                 <?php foreach($products as $items) : ?>
 
                     <div class="product-item">
-                        <div class="new-product">
-                            <span class="hot"><img src="images/hot.png"></span>
-                        </div>
+
                         <div class="container">
                             <div class="item item-type-zoom">
                                 <a class="item-hover" href="single_page.html">
@@ -89,14 +57,8 @@ $brands = Brand::find()->all();
                         </div>
                     </div>
                 <?php endforeach; ?>
-            </div>
-            <div class="control-button">
-                <span class="step-backward carousel-prev"><i class="fa fa-step-backward"></i></span>
-                <span class="step-forward carousel-next"><i class="fa fa-step-forward"></i></span>
-            </div>
 
 
-        </div>
     </div>
 
 

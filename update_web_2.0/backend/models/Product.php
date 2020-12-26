@@ -18,6 +18,7 @@ use Yii;
  * @property string $SIM
  * @property string $image
  * @property string $best_seller
+ * @property string $os
  *
  * @property Cartitem[] $cartitems
  * @property Brand $brand
@@ -40,9 +41,9 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['brand_id', 'name', 'price', 'Ram', 'Rom', 'CPU', 'Pin', 'SIM'], 'required'],
+            [['brand_id', 'name', 'os', 'price', 'Ram', 'Rom', 'CPU', 'Pin', 'SIM'], 'required'],
             [['brand_id', 'price', 'Ram', 'Rom', 'Pin'], 'integer'],
-            [['name', 'CPU', 'SIM','best_seller'], 'string', 'max' => 50],
+            [['name', 'os', 'CPU', 'SIM','best_seller'], 'string', 'max' => 50],
             [['image'], 'file', 'extensions' => 'jpg,png,gif'],
             [['brand_id'], 'exist', 'skipOnError' => true, 'targetClass' => Brand::className(), 'targetAttribute' => ['brand_id' => 'id']],
         ];
@@ -57,6 +58,7 @@ class Product extends \yii\db\ActiveRecord
             'id' => 'ID',
             'brand_id' => 'Brand ID',
             'name' => 'Name',
+            'os' => 'OS',
             'price' => 'Price',
             'Ram' => 'Ram',
             'Rom' => 'Rom',
@@ -97,6 +99,21 @@ class Product extends \yii\db\ActiveRecord
     public function findOppo()
     {
         return parent::find()->where(['brand_id' => 5]);
+    }
+
+    public function findIos()
+    {
+        return parent::find()->where(['os' => 'iOS']);
+    }
+
+    public function findVos()
+    {
+        return parent::find()->where(['os' => 'VOS']);
+    }
+
+    public function findAndroid()
+    {
+        return parent::find()->where(['os' => 'Android']);
     }
 
     public function findBest()

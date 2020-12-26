@@ -10,6 +10,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 use backend\models\Brand;
+use backend\models\Product;
 
 AppAsset::register($this);
 ?>
@@ -28,7 +29,9 @@ $brands = Brand::find()->all();
     <?php $this->head() ?>
 </head>
 <body>
+
 <?php $this->beginBody() ?>
+
 <div class="header-container">
     <header id="header">
         <div class="top_header_nav">
@@ -61,15 +64,8 @@ $brands = Brand::find()->all();
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="field-search">
-                            <input type="text" class="form-control" name="search_query" value="Search..." id="search_query_top">
-                            <button class="btn button-search">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
+                        <img src="images/logo.png" />
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -81,6 +77,7 @@ $brands = Brand::find()->all();
                     <div class="row">
                         <nav>
                             <ul>
+
                                 <li class="active">
                                     <?php echo Html::a('<i class="fa fa-home fa-2x"></i>',['/site/index']); ?>
                                 </li>
@@ -92,11 +89,11 @@ $brands = Brand::find()->all();
                                         <div class="category">
                                             <div class="category-content">
                                                 <ul>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> IOS</a></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> IOS', ['/product/os','os'=>'IOS']); ?></li>
 
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Android</a></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> Android', ['/product/os','os'=>'Android']); ?></li>
 
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> VOS</a></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> VOS', ['/product/os','os'=>'VOS']); ?></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -148,6 +145,7 @@ $brands = Brand::find()->all();
     </header>
     <!-- End tag header -->
 </div>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
