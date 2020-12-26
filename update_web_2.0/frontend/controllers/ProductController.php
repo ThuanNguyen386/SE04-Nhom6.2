@@ -20,6 +20,19 @@ class ProductController extends Controller {
         return $this->render('android');
     }
 
+    public function actionPrice($price) {
+        if($price == 'under3'){
+            return $this->render('under3');
+        }
+        if($price == '3to5'){
+            return $this->render('3to5');
+        }
+        if($price == '5to10'){
+            return $this->render('5to10');
+        }
+        return $this->render('above10');
+    }
+
     public function actionView($id) {
         $model = Product::findOne(['id'=>$id]);
         return $this->render('view',[

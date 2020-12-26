@@ -107,10 +107,10 @@ $brands = Brand::find()->all();
                                         <div class="category">
                                             <div class="category-content">
                                                 <ul>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Dưới 3 triệu</a></li>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Từ 3  triệu - 5 triệu</a></li>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Từ 5 triệu - 10 triệu</a></li>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Trên 10 triệu</a></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> Dưới 3 triệu', ['/product/price','price'=>'under3']); ?></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> Từ 3 triệu - 5 triệu', ['/product/price','price'=>'3to5']); ?></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> Từ 5 triệu - 10 triệu', ['/product/price','price'=>'5to10']); ?></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> Trên 10 triệu', ['/product/price','price'=>'above10']); ?></li>
                                                 </ul>
                                             </div>
                                         </div>

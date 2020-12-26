@@ -121,10 +121,32 @@ class Product extends \yii\db\ActiveRecord
         return parent::find()->where(['best_seller' => 'Yes']);
     }
 
+    public function findUnder3()
+    {
+        return parent::find()->where(['<','price','3000000']);
+    }
+
+    public function find3to5()
+    {
+        return parent::find()->where(['and', 'price>=3000000', 'price<=5000000']);
+    }
+
+    public function find5to10()
+    {
+        return parent::find()->where(['and', 'price>=5000000', 'price<=10000000']);
+    }
+
+    public function findAbove10()
+    {
+        return parent::find()->where(['>','price','10000000']);
+    }
+
     public function getCartitems()
     {
         return $this->hasMany(Cartitem::className(), ['product_id' => 'id']);
     }
+
+
 
     /**
      * Gets query for [[Brand]].
