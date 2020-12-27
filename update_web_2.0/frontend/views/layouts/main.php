@@ -124,9 +124,8 @@ $brands = Brand::find()->all();
                                         <div class="category">
                                             <div class="category-content">
                                                 <ul>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Chính sách đổi trả</a></li>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Chính sách bảo hành</a></li>
-                                                    <li><a href=""><i class="fa fa-angle-right"></i> Chính sách trả góp</a></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> Đổi trả & bảo hành', ['/support/index','support'=>'warranty']); ?></li>
+                                                    <li><?= Html::a('<i class="fa fa-angle-right"></i> Chính sách trả góp', ['/support/index','support'=>'installment']); ?></li>
 
                                                 </ul>
                                             </div>
