@@ -61,11 +61,11 @@ $brands = Brand::find()->all();
         <?php echo Html::a('Xóa giỏ hàng',['/cart/clear'],['class'=>'btn btn-danger']); ?>
         <?php echo Html::a('Đặt hàng',['/checkout/index'],['class'=>'btn btn-primary']); ?>
     <div>
-                            <?php else: ?>
-                                <div class="alert alert-warning">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                    <strong>Thông báo</strong> Giỏ hàng của bạn đang rỗng
-                                    <?php echo Html::a('Tiếp tục mua hàng',['/site'],['class'=>'btn btn-succcess']); ?>
-                                </div>
+        <?php else: ?>
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Thông báo</strong> Giỏ hàng của bạn đang rỗng
+                <?php echo Html::a('Tiếp tục mua hàng',['/site'],['class'=>'btn btn-succcess']); ?>
+            </div>
     <?php endif; ?>
 </div>

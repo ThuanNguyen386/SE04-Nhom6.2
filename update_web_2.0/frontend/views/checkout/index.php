@@ -58,7 +58,6 @@ $brands = Brand::find()->all();
                 </tr>
             </tbody>
         </table>
-
         <button type="submit" class = "btn btn-primary pull-right">Xác nhận thanh toán</button>
     </div>
     <?php ActiveForm::end(); ?>

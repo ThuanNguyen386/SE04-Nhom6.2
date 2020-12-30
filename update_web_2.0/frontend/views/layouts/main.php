@@ -47,7 +47,7 @@ $brands = Brand::find()->all();
                             </li>
                             <li>
                                 <i class="fas fa-sign-out"></i>
-                                Đăng xuất
+                                    Đăng xuất
                             </li>
                         </ul>
                     </div>
