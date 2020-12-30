@@ -42,17 +42,12 @@ $brands = Brand::find()->all();
                         <div class="center_top_header col-md-2">
                         </div>
                         <ul id="header_links" class="col-md-5  text-right">
-
                             <li>
-                                <i class="fa fa-heart"></i>
-                                <a href="single_page.html">My Wishlist</a>
+                                <?php echo Html::a ('<i class="fas fa-shopping-cart" style="color:black"></i> Giỏ Hàng',['/cart/index']); ?>
                             </li>
                             <li>
-                                <?php echo Html::a ('<i class="fa fa-cart-arrow-down"></i> Giỏ Hàng',['/cart/index']); ?>
-                            </li>
-                            <li>
-                                <i class="fa fa-facebook-official"></i>
-                                <a href="login.html">Đăng nhập</a>
+                                <i class="fas fa-sign-out"></i>
+                                Đăng xuất
                             </li>
                         </ul>
                     </div>
