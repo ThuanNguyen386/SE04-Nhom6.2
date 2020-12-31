@@ -28,9 +28,9 @@ $products = Product::find3to5()->all();
                         <a class="item-hover" href="single_page.html">
                             <div class="item-info">
                                 <div class="headline">
-                                    Xem chi tiết
+                                    <div class="date">Ram: <?php echo $items->Ram ?> GB</div>
                                     <div class="line"></div>
-                                    <div class="date"><?php echo $items->name ?></div>
+                                    <div class="date">Rom: <?php echo $items->Rom ?> GB</div>
                                 </div>
                             </div>
                             <div class="mask"></div>
@@ -43,15 +43,14 @@ $products = Product::find3to5()->all();
                 </div>
                 <div class="product-button">
                     <div class="add-to-cart">
-                        <p>
-                            <i class="fa fa-shopping-cart"></i>
-                            <span>
-                                    <?php echo Html::a ('ADD TO CART',['/cart/add-cart','id'=>$items->id]); ?>
-                                    </span>
-                        </p>
+                        <span>
+                            <?php echo Html::a ('<i class="fa fa-shopping-cart"></i> Thêm vào giỏ',['/cart/add-cart','id'=>$items->id]); ?>
+                        </span>
                     </div>
-                    <div class="add-to-wishlist">
-                        <p><i class="fa fa-heart"></i></p>
+                    <div>
+                        <span>
+                            <?php echo Html::a ('<i class="fa fa-eye"></i>',['/product/index','id'=>$items->id]); ?>
+                        </span>
                     </div>
 
                 </div>

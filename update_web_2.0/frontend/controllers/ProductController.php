@@ -3,11 +3,16 @@ namespace frontend\controllers;
 use Yii;
 use yii\web\Controller;
 use backend\models\Product;
-
+use Yii\Data\ActiveDataProvider;
 
 class ProductController extends Controller {
-    public function actionIndex() {
 
+
+
+    public function actionIndex($id) {
+
+        $product = Product::findOne($id);
+        return $this->render('/product/detail',['product' => $product]);
     }
 
     public function actionOs($os) {

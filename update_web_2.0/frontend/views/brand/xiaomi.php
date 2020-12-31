@@ -59,9 +59,9 @@ $brands = Brand::find()->all();
                                 <a class="item-hover" href="single_page.html">
                                     <div class="item-info">
                                         <div class="headline">
-                                            Xem chi tiết
+                                            <div class="date">Ram: <?php echo $items->Ram ?> GB</div>
                                             <div class="line"></div>
-                                            <div class="date"><?php echo $items->name ?></div>
+                                            <div class="date">Rom: <?php echo $items->Rom ?> GB</div>
                                         </div>
                                     </div>
                                     <div class="mask"></div>
@@ -70,19 +70,18 @@ $brands = Brand::find()->all();
                             </div>
                         </div>
                         <div class="product-name">
-                            <p><span class="name"><?php echo $items->name ?></span><span class="product-price"><?php echo $items->price ?></span></p>
+                            <p><span class="name"><?php echo $items->name ?></span><span class="product-price"><?php echo number_format($items->price,0,' ','.'); ?></span></p>
                         </div>
                         <div class="product-button">
                             <div class="add-to-cart">
-                                <p>
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span>
-                                    <?php echo Html::a ('ADD TO CART',['/cart/add-cart','id'=>$items->id]); ?>
-                                    </span>
-                                </p>
+                                <span>
+                                    <?php echo Html::a ('<i class="fa fa-shopping-cart"></i> Thêm vào giỏ',['/cart/add-cart','id'=>$items->id]); ?>
+                                </span>
                             </div>
-                            <div class="add-to-wishlist">
-                                <p><i class="fa fa-heart"></i></p>
+                            <div>
+                                <span>
+                                    <?php echo Html::a ('<i class="fa fa-eye"></i>',['/product/index','id'=>$items->id]); ?>
+                                </span>
                             </div>
 
                         </div>
