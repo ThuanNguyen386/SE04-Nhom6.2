@@ -18,6 +18,7 @@ class ProductSearch extends Product
     {
         return [
             [['id', 'brand_id', 'price', 'Ram', 'Rom', 'Pin'], 'integer'],
+            [['name', 'os', 'CPU', 'SIM','best_seller','display','camera_truoc', 'camera_sau'], 'string', 'max' => 60],
             [['name', 'CPU', 'SIM', 'image'], 'safe'],
         ];
     }
@@ -64,6 +65,11 @@ class ProductSearch extends Product
             'Ram' => $this->Ram,
             'Rom' => $this->Rom,
             'Pin' => $this->Pin,
+            'best_seller' => $this->best_seller,
+            'os' => $this->os,
+            'display' => $this->display,
+            'camera_truoc' => $this->camera_truoc,
+            'camera_sau' => $this->camera_sau,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])

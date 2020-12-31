@@ -19,6 +19,9 @@ use Yii;
  * @property string $image
  * @property string $best_seller
  * @property string $os
+ * @property string $display
+ * @property string $camera_truoc
+ * @property string $camera_sau
  *
  * @property Cartitem[] $cartitems
  * @property Brand $brand
@@ -41,9 +44,9 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['brand_id', 'name', 'os', 'price', 'Ram', 'Rom', 'CPU', 'Pin', 'SIM'], 'required'],
+            [['brand_id', 'name', 'os', 'price', 'Ram', 'Rom', 'CPU', 'Pin', 'SIM', 'best_seller','display','camera_truoc', 'camera_sau'], 'required'],
             [['brand_id', 'price', 'Ram', 'Rom', 'Pin'], 'integer'],
-            [['name', 'os', 'CPU', 'SIM','best_seller'], 'string', 'max' => 50],
+            [['name', 'os', 'CPU', 'SIM','best_seller','display','camera_truoc', 'camera_sau'], 'string', 'max' => 60],
             [['image'], 'file', 'extensions' => 'jpg,png,gif'],
             [['brand_id'], 'exist', 'skipOnError' => true, 'targetClass' => Brand::className(), 'targetAttribute' => ['brand_id' => 'id']],
         ];
@@ -66,7 +69,10 @@ class Product extends \yii\db\ActiveRecord
             'Pin' => 'Pin',
             'SIM' => 'Sim',
             'image' => 'Upload Image',
-            'best_seller' => 'Best seller'
+            'best_seller' => 'Best seller',
+            'display' => 'Display',
+            'camera_truoc' => 'Main camera',
+            'camera_sau' => 'Selfie camera'
         ];
     }
 
@@ -140,6 +146,9 @@ class Product extends \yii\db\ActiveRecord
     {
         return parent::find()->where(['>','price','10000000']);
     }
+
+
+
 
     public function getCartitems()
     {

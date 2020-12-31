@@ -33,6 +33,16 @@ use yii\widgets\ActiveForm;
 
     <?php  echo $form->field($model, 'SIM') ?>
 
+    <?php  echo $form->field($model, 'best_seller') ?>
+
+    <?php  echo $form->field($model, 'os') ?>
+
+    <?php  echo $form->field($model, 'display') ?>
+
+    <?php  echo $form->field($model, 'camera_truoc') ?>
+
+    <?php  echo $form->field($model, 'camera_sau') ?>
+
     <?php  echo $form->field($model, 'image') ?>
 
     <div class="form-group">

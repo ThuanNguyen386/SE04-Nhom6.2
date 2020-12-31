@@ -38,7 +38,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'CPU',
             'Pin',
             'SIM',
-            'image:image',
+            'best_seller',
+            'os',
+            'display',
+            'camera_sau',
+            'camera_truoc',
+            'image:image'
         ],
     ]) ?>
 

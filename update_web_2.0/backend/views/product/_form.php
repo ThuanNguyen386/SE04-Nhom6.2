@@ -28,6 +28,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'SIM')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'best_seller')->textInput() ?>
+
+    <?= $form->field($model, 'os')->textInput() ?>
+
+    <?= $form->field($model, 'display')->textInput() ?>
+
+    <?= $form->field($model, 'camera_truoc')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'camera_sau')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'image')->fileInput() ?>
 
     <div class="form-group">
