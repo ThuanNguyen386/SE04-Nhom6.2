@@ -33,9 +33,9 @@
 #### - Đặt hàng nhanh chóng chỉ qua vài bước xác minh danh tính
 
 ## 5. Các thành viên của nhóm xây dựng trang web
-### - Nguyễn Anh Duy
-### - Phạm Tấn Dũng
-### - Nguyễn Đình Thuận
-### - Nguyễn Ngọc Vũ Hưng
-### - Đàm Quang Toàn
+#### - Nguyễn Anh Duy
+#### - Phạm Tấn Dũng
+#### - Nguyễn Đình Thuận
+#### - Nguyễn Ngọc Vũ Hưng
+#### - Đàm Quang Toàn
 
