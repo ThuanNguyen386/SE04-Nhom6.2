@@ -45,10 +45,6 @@ $brands = Brand::find()->all();
                             <li>
                                 <?php echo Html::a ('<i class="fas fa-shopping-cart" style="color:black"></i> Giỏ Hàng',['/cart/index']); ?>
                             </li>
-                            <li>
-                                <i class="fas fa-sign-out"></i>
-                                    Đăng xuất
-                            </li>
                         </ul>
                     </div>
                 </div>
