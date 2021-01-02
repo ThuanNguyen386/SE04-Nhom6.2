@@ -43,7 +43,7 @@ $brands = Brand::find()->all();
                     ?>
                         <input type="hidden" name="id" value="<?php echo $item->id ?>"/>
                         <input type="text" name="qtt" value="<?php echo $item->qtt ?>" size="4" class="form-control"/>
-                        <input type="submit" name="Update" value="Upadte" class="btn btn-sm btn-success">
+                        <input type="submit" name="Update" value="Update" class="btn btn-sm btn-success">
                     <?php echo Html::a('Delete',['/cart/remove','id'=>$item->id],['class'=>'btn btn-sm btn-danger']); ?>
                     <?php ActiveForm::end(); ?>
 
