@@ -23,6 +23,7 @@
 
 ## 4. Các chức năng chính
 ### 4.1 Admin (quản lí trang web thông qua giao diện backend của Yii2) 
+#### - Thêm hoặc gỡ bỏ các thương hiệu mà web hợp tác bán sản phẩm
 #### - Thêm/sửa/xóa thông tin của các sản phẩm 
 #### - Kiểm tra lịch sử đặt hàng của khách  
 ### 4.2 Customer (khách hàng)
@@ -32,7 +33,10 @@
 #### - Thêm các sản phẩm muốn mua vào giỏ hàng được tạo tự động
 #### - Đặt hàng nhanh chóng chỉ qua vài bước xác minh danh tính
 
-## 5. Các thành viên của nhóm xây dựng trang web
+## 5. Các sử dụng
+https://github.com/ThuanNguyen386/SE04-Nhom6.2/wiki
+
+## 6. Các thành viên của nhóm xây dựng trang web
 #### - Nguyễn Anh Duy
 #### - Phạm Tấn Dũng
 #### - Nguyễn Đình Thuận
