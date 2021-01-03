@@ -31,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'buyer_address',
             'buyer_phone',
             'product_id',
-            //'quantity',
-            //'buy_date',
+            'quantity',
+            'buy_date',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
