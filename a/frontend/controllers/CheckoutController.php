@@ -25,9 +25,12 @@ class CheckoutController extends Controller {
                 $orderItem->quantity = $item->qtt;
                 if($orderItem->save())
                 {
-                    $cart = new Cart();
                     $cart->removeall();
                     echo "<script type='text/javascript'>alert('Dat hang thanh cong');</script>";
+                    return $this->render('/cart/index',[
+                        'cartstore' => [],
+                        'cost' => $cost,
+                    ]);
                 }
             }
             endforeach;
