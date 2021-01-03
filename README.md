@@ -45,7 +45,9 @@ https://github.com/ThuanNguyen386/SE04-Nhom6.2/wiki
 
 
 # Kiến trúc hệ thống Yii2
- Các ứng dụng Yii được tổ chức dựa theo mẫu thiết kế MVC. Models chứa nghiệp vụ logic, truy xuất database và định nghĩa các quy tắc xác thực dữ liệu; views đảm nhận việc hiển thị thông tin của model và controllers có nhiệm vụ điều hướng các yêu cầu và chuyển các tương tác giữa models và views
+ <p>Các ứng dụng Yii được tổ chức dựa theo mẫu thiết kế MVC. Models chứa nghiệp vụ logic, truy xuất database và định nghĩa các quy tắc xác thực dữ liệu; views đảm nhận việc hiển thị thông tin của model và controllers có nhiệm vụ điều hướng các yêu cầu và chuyển các tương tác giữa models và views. Yii có 2 phiên bản basic và advanced, trang web này sử dụng Yii advanced.</p>
+ <p>Cấu trúc Yii advanced</p>
+ 
  * common			Dùng chung cho frontend và backend
     * config/              Cấu hình được chia sẻ 
     * mail/                Các files cho email
