@@ -33,7 +33,7 @@
 #### - Thêm các sản phẩm muốn mua vào giỏ hàng được tạo tự động
 #### - Đặt hàng nhanh chóng chỉ qua vài bước xác minh danh tính
 
-## 5. Các sử dụng
+## 5. Cách sử dụng
 https://github.com/ThuanNguyen386/SE04-Nhom6.2/wiki
 
 ## 6. Các thành viên của nhóm xây dựng trang web
