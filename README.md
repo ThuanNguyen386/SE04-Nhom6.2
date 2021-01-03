@@ -84,5 +84,6 @@ https://github.com/ThuanNguyen386/SE04-Nhom6.2/wiki
  * vendor/                  Chứa các thư viện mở rộng của bên thứ ba
 
  * environments/            Chứa các môi trường được ghi đè(bao gồm dev và product)
+ * environments/            Chứa các môi trường được ghi đè(bao gồm dev và product)
 
 
